@@ -1,0 +1,24 @@
+{%extends 'theme.html' %}
+{%block content%}
+<title>Slides</title>
+<nav class="navbar navbar-light bg-primary" id="navbar">
+    <a class="navbar-brand text-center" href="#">Cars</a>
+  </nav>
+
+<!-- For Loop -->
+<div class="container">
+    <div class="row">
+{%for pro in cars%}
+     <div class="col-md-3 bg-light">
+        <div class="card">
+            <img class="card-img-top" src="{{pro.image}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{pro.name}}</h5>
+                <p class="card-text">{{pro.price}}</p>
+            </div>
+        </div>
+    </div>
+      {% endfor%}
+    </div>
+</div>
+{% endblock %}
